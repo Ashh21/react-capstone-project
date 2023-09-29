@@ -1,43 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Roboto&family=Single+Day&display=swap');
 
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.container-one{
+.container-one {
     display: flex;
     justify-content: space-around;
     min-height: 100vh;
 }
 
-.left{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.container-two{
+.container-two {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background-color: black;
+    width: 100%;
 }
 
-.input-div{
+.left {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    background-image: url('/src/images/image\ 13.png');
+    object-fit: fill;
+    width: 100%;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 141.688%;
+    letter-spacing: 1.1px;
+    padding: 6rem 4rem;
+}
+
+.right {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.right>h1 {
+    padding-bottom: 1rem;
+    font-family: 'Single Day', cursive;
+    font-size: 67px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 139.688%;
+    color: #72DB73;
+}
+
+.right>p {
+    color: #FFF;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 139.688%;
+    /* 34.922px */
+    padding-bottom: 1rem;
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-top: 1rem;
+    padding: 0 12rem;
 }
 
-.input-div > input {
-    margin: 0.4rem 0;
+.input-div>input {
+    margin: 0.6rem 0;
+    border: none;
+    padding-left: 1rem;
     border-radius: 0.2rem;
+    background-color: #292929;
+    color: #7C7C7C;
+    width: 450px;
+    height: 3rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20.033px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 139.688%;
+    letter-spacing: 0.401px;
 }
 
-.signup-btn{
+label {
+    color: #7C7C7C;
+}
+
+.signup-btn {
     margin-top: 1rem;
     border: none;
     border-radius: 1rem;
-    padding: 0.5rem;
+    height: 3rem;
+    color: white;
+    background-color: #72DB73;
+    font-size: 1.4rem;
+    width: 450px;
+}
+
+.tnc {
+    color: #7C7C7C;
+    width: 450px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 141.688%;
+    letter-spacing: 0.36px;
+    padding-top: 1rem;
+}
+
+span {
+    color: #72DB73;
 }

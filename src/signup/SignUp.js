@@ -8,7 +8,7 @@ const SignUp = () => {
                 <h1>Discover new things on Superapp</h1>
             </div>
             <div className='container-two'>
-                <div>
+                <div className='right'>
                     <h1>Super app</h1>
                     <p>Create your new account</p>
                 </div>
@@ -24,8 +24,9 @@ const SignUp = () => {
 
                     <button className='signup-btn'>SIGN UP</button>
 
-                    <p></p>
-                    <p></p>
+                    <p className='tnc'> By clicking on Sign up. you agree to Superapp <span>Terms and Conditions of Use</span> </p>
+
+                    <p className='tnc'>To learn more about how Superapp collects, uses, shares and protects your personal data please head Superapp <span>Privacy Policy</span> </p>
                 </div>
             </div>
         </div>
