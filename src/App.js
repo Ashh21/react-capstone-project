@@ -1,12 +1,13 @@
 
-import { createBrowserRouter } from 'react-router-dom';
+import { Outlet, createBrowserRouter } from 'react-router-dom';
 // import './App.css';
 import { SignUp } from './signup/SignUp';
+import { Body } from './body/Body';
 
 function App() {
   return (
     <div className="App">
-      <SignUp />
+      <Outlet />
     </div>
   );
 }
@@ -14,7 +15,17 @@ function App() {
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <SignUp />
+      },
+      {
+        path: "/body",
+        element: <Body />
+      }
+    ]
   }
 ])
 
