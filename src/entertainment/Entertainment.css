@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Roboto&family=Single+Day&display=swap');
+
+.container {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    padding: 4rem;
+    background: #000;
+    min-height: 100vh;
+}
+
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5rem;
+}
+
+.text {
+    padding-top: 1rem;
+}
+
+.text>h2 {
+    color: #72DB73;
+    font-family: 'Single Day', cursive;
+    font-size: 71px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 139.688%;
+}
+
+.text>h1 {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 245px;
+    height: 200px;
+    padding: 1rem 0;
+    border-radius: 1rem;
+}
+
+img {
+    width: 200px;
+    height: 118px;
+    border-radius: 1rem;
+    margin: 0.2rem 0;
+}
+
+h3 {
+    padding: 0 0 1rem 0;
+    color: #FFF;
+    font-family: ' DM Sans';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.choices {
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    border-radius: 4rem;
+    text-align: center;
+    /* padding: 2rem; */
+}
+
+
+.choices-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background-color: #148A08;
+    width: 200px;
+    height: 50px;
+    border-radius: 2rem;
+}
+
+span {
+    color: #085C00;
+    padding-left: 5rem;
+    font-weight: 600;
+    /* padding-right: 0.5rem; */
+    cursor: pointer;
+}
+
+.next-btn {
+    border-radius: 2rem;
+    border: none;
+    background-color: #148A08;
+    color: #FFF;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-family: ' DM Sans';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 92.2%;
+    letter-spacing: 0.526px;
+    position: absolute;
+    bottom: 2rem;
+    right: 8rem;
+}
+
+.error {
+    color: #F00;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25.14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105.688%;
+    letter-spacing: 0.503px;
+}

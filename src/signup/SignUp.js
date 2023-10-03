@@ -16,7 +16,7 @@ const SignUp = () => {
     const isEmailValid = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(email);
     const isMobileValid = /^[6-9]\d{9}$/.test(mobile);
     const navigate = useNavigate();
-    console.log(data)
+    // console.log(data)
 
 
 
@@ -41,7 +41,7 @@ const SignUp = () => {
             localStorage.setItem("data", JSON.stringify({
                 name, userName, email, mobile
             }))
-            navigate('/body');
+            navigate('/Entertainment');
             setError("");
         }
 

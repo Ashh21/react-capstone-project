@@ -2,7 +2,8 @@
 import { Outlet, createBrowserRouter } from 'react-router-dom';
 // import './App.css';
 import { SignUp } from './signup/SignUp';
-import { Body } from './body/Body';
+import { Entertainment } from './entertainment/Entertainment';
+import { Home } from './home/Home';
 
 function App() {
   return (
@@ -22,8 +23,12 @@ const appRouter = createBrowserRouter([
         element: <SignUp />
       },
       {
-        path: "/body",
-        element: <Body />
+        path: "/Entertainment",
+        element: <Entertainment />
+      },
+      {
+        path: "/home",
+        element: <Home />
       }
     ]
   }
