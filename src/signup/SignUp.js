@@ -3,11 +3,11 @@ import '../signup/SignUp.css'
 import { useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
-    const data = JSON.parse(localStorage.getItem("data") || {})
-    const [name, setName] = useState(data?.name || "")
-    const [userName, setUserName] = useState(data.userName || "")
-    const [email, setEmail] = useState(data.email || "")
-    const [mobile, setMobile] = useState(data.mobile || "")
+    // const data = JSON.parse(localStorage.getItem("data") || {})
+    const [name, setName] = useState("")
+    const [userName, setUserName] = useState("")
+    const [email, setEmail] = useState("")
+    const [mobile, setMobile] = useState( "")
     const [isChecked, setIsChecked] = useState(false)
     const [error, setError] = useState("")
 
@@ -16,9 +16,6 @@ const SignUp = () => {
     const isEmailValid = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(email);
     const isMobileValid = /^[6-9]\d{9}$/.test(mobile);
     const navigate = useNavigate();
-    // console.log(data)
-
-
 
     const signupHandler = () => {
         const newErrors = {}

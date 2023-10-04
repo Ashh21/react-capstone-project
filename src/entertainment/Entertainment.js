@@ -9,29 +9,27 @@ const Entertainment = () => {
     const navigate = useNavigate();
 
     const clickHandler = (category) => {
-
-        const updatedSelectedCategory = [...selectedCategory, category]
-        setSelectedCategory(updatedSelectedCategory)
+        const updateSelectedCategory = selectedCategory.includes(category)
+            ? selectedCategory.filter(c => c !== category)
+            : [...selectedCategory, category]
+        setSelectedCategory(updateSelectedCategory)
     }
 
     const removeHandler = (category) => {
-        const updateItem = selectedCategory.filter(item => item.id !== category.id)
+        const updateItem = selectedCategory.filter(c => c.id !== category.id)
         setSelectedCategory([...updateItem])
-
     }
 
-    const handleButton = () => {
-        if (selectedCategory.length < 3) {
-            setError("Minimum 3 category required")
-        }
-        else {
-            navigate("/home")
-            setError("")
-        }
-
+    const nextButton = () => {
+        localStorage.setItem('selectedCategory', JSON.stringify(selectedCategory))
+        const updateError = selectedCategory.length < 3
+            ? "Minimum 3 category required"
+            : (navigate("/home"), "")
+        setError(updateError);
     }
 
-    console.log(selectedCategory)
+    // const borderStyle = selectedCategory.find(c => c !== ) ? " 2px solid #11B800" : "";
+
     return (
         <div className='container'>
             <div className='container-1'>
@@ -44,11 +42,12 @@ const Entertainment = () => {
                 <div className='choices'>
                     {
                         selectedCategory.map(category =>
-                            <div className='choices-div' key={category.id}>
+                            <div className='choices-div'
+                                key={category.id}>
                                 <div >{category.title}</div>
                                 <span onClick={() => removeHandler(category)}>X</span>
-                            </div>)
-                    }
+                            </div>
+                        )}
                 </div>
                 <div className='error'>
                     {error}
@@ -66,10 +65,10 @@ const Entertainment = () => {
                         </div>
                     ))}
 
-                <button onClick={handleButton} className='next-btn'>Next Page</button>
+                <button onClick={() => nextButton()} className='next-btn'>Next Page</button>
             </div>
 
-        </div>
+        </div >
     )
 }
 
