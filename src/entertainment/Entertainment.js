@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./Entertainment.css"
 import { jsonData } from './Data'
 import { useNavigate } from 'react-router-dom'
+import { Choices } from './Choices'
 
 const Entertainment = () => {
     const [selectedCategory, setSelectedCategory] = useState([])
@@ -15,11 +16,6 @@ const Entertainment = () => {
         setSelectedCategory(updateSelectedCategory)
     }
 
-    const removeHandler = (category) => {
-        const updateItem = selectedCategory.filter(c => c.id !== category.id)
-        setSelectedCategory([...updateItem])
-    }
-
     const nextButton = () => {
         localStorage.setItem('selectedCategory', JSON.stringify(selectedCategory))
         const updateError = selectedCategory.length < 3
@@ -28,6 +24,7 @@ const Entertainment = () => {
         setError(updateError);
     }
 
+    console.log(selectedCategory)
     // const borderStyle = selectedCategory.find(c => c !== ) ? " 2px solid #11B800" : "";
 
     return (
@@ -40,14 +37,10 @@ const Entertainment = () => {
                     <h1>category</h1>
                 </div>
                 <div className='choices'>
-                    {
-                        selectedCategory.map(category =>
-                            <div className='choices-div'
-                                key={category.id}>
-                                <div >{category.title}</div>
-                                <span onClick={() => removeHandler(category)}>X</span>
-                            </div>
-                        )}
+                {
+                selectedCategory.map(category =>
+                    <Choices key={category.id} category={category} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+                )}
                 </div>
                 <div className='error'>
                     {error}

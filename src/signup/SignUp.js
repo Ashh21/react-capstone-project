@@ -3,7 +3,6 @@ import '../signup/SignUp.css'
 import { useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
-    // const data = JSON.parse(localStorage.getItem("data") || {})
     const [name, setName] = useState("")
     const [userName, setUserName] = useState("")
     const [email, setEmail] = useState("")

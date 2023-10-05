@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Roboto&family=Single+Day&display=swap');
+
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    /* grid-template-columns: repeat(6, 1fr); */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 375px 200px 220px;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "a a a b b c c"
+        "d d d b b c c"
+        "e e e e e c c";
+    padding: 3.5rem;
+}
+
+.grid-item {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.a {
+    grid-area: a;
+    background-color: #5746EA;
+    border-radius: 1rem;
+    display: flex;
+}
+
+.img-div>img {
+    margin-left: 1rem;
+    height: 100%;
+}
+
+.data-div {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    text-align: left;
+}
+
+.data-div1 {
+    padding-left: 0.8rem;
+}
+
+.data-div1>h1 {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 103.688%;
+    letter-spacing: 0.42px;
+    padding: 0.4rem ;
+}
+
+.data-div .username {
+    font-size: 2.6rem;
+}
+
+.home-choice-div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-choice-card {
+    width: 135px;
+    height: 35px;
+    margin: 0.6rem;
+    background-color: #9F94FF;
+    color: #fff;
+    border-radius: 3rem;
+    text-align: center;
+    border: none;
+    padding: 0.2rem;
+}
+
+.b {
+    grid-area: b;
+    background-color: #F1C75B;
+    border-radius: 1rem;
+
+}
+
+.c {
+    grid-area: c;
+    background-color: skyblue;
+    border-radius: 1rem;
+}
+
+.d {
+    grid-area: d;
+    background-color: #FF4ADE;
+    border-radius: 1rem;
+
+}
+
+.e {
+    grid-area: e;
+    background-color: #1E2343;
+    border-radius: 1rem;
+}

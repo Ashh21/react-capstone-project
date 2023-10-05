@@ -1,6 +1,6 @@
 
 import { Outlet, createBrowserRouter } from 'react-router-dom';
-// import './App.css';
+import './App.css';
 import { SignUp } from './signup/SignUp';
 import { Entertainment } from './entertainment/Entertainment';
 import { Home } from './home/Home';
