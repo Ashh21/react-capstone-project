@@ -9,7 +9,7 @@ const Choices = ({ selectedCategory, setSelectedCategory, category }) => {
         <>
             <div className='choices-div'>
                 <div >{category.title}</div>
-                <span onClick={() => removeHandler(category)}>X</span>
+                <div className='remove' onClick={() => removeHandler(category)}>X</div>
             </div>
         </>
     )

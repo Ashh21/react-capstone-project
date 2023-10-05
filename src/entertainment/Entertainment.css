@@ -91,7 +91,7 @@ h3 {
     border-radius: 2rem;
 }
 
-span {
+.remove {
     color: #085C00;
     padding-left: 5rem;
     font-weight: 600;

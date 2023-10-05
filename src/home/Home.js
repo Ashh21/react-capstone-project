@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import "./Home.css"
 import { UserProfile } from './UserProfile'
+import { WeatherCard } from './WeatherCard'
+import { NotesCard } from './NotesCard'
 
 
 const Home = () => {
-    const [inputValue, setInputValue] = useState("")
 
     return (
         <div class="grid-container">
@@ -12,10 +13,12 @@ const Home = () => {
                 <UserProfile />
             </section>
             <div class="grid-item b" >
-                <input onChange={(e) => setInputValue(e.target.value)} value={inputValue} />
+                <NotesCard />
             </div>
             <div class="grid-item c">C</div>
-            <div class="grid-item d">D</div>
+            <div class="grid-item d">
+                <WeatherCard />
+            </div>
             <div class="grid-item e">E</div>
         </div>
     )
