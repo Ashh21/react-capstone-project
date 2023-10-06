@@ -4,6 +4,7 @@ import './App.css';
 import { SignUp } from './signup/SignUp';
 import { Entertainment } from './entertainment/Entertainment';
 import { Home } from './home/Home';
+import { EntertainmentPage } from './entertainmentpage/EntertainmentPage';
 
 function App() {
   return (
@@ -23,12 +24,16 @@ const appRouter = createBrowserRouter([
         element: <SignUp />
       },
       {
-        path: "/Entertainment",
+        path: "/entertainment",
         element: <Entertainment />
       },
       {
         path: "/home",
         element: <Home />
+      },
+      {
+        path: "/entertainmentPage",
+        element: <EntertainmentPage />
       }
     ]
   }

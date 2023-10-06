@@ -37,7 +37,7 @@ const SignUp = () => {
             localStorage.setItem("data", JSON.stringify({
                 name, userName, email, mobile
             }))
-            navigate('/Entertainment');
+            navigate('/entertainment');
             setError("");
         }
 
