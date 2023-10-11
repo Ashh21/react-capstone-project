@@ -5,6 +5,7 @@ import { WeatherCard } from './WeatherCard'
 import { NotesCard } from './NotesCard'
 import { NewsCard } from './NewsCard'
 import { useNavigate } from 'react-router-dom'
+import { TimerCard } from './TimerCard'
 
 
 const Home = () => {
@@ -27,7 +28,9 @@ const Home = () => {
             <div class="grid-item d">
                 <WeatherCard />
             </div>
-            <div class="grid-item e">E</div>
+            <div class="grid-item e">
+                <TimerCard />
+            </div>
             <button onClick={browseBtnHandler} className='browse-btn'> browse</button>
         </div>
     )

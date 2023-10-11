@@ -54,7 +54,7 @@ const Entertainment = () => {
                             style={{ backgroundColor: card.backgroundColor }}
                         >
                             <h3>{card.title}</h3>
-                            <img src={card.imgUrl} alt='icon' />
+                            <img className='card-img' src={card.imgUrl} alt='icon' />
                         </div>
                     ))}
 

@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Roboto&family=Single+Day&display=swap');
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .container {
     display: grid;
     grid-template-columns: 4fr 4fr;
@@ -54,7 +60,7 @@
     border-radius: 1rem;
 }
 
-img {
+.card-img {
     width: 200px;
     height: 118px;
     border-radius: 1rem;
