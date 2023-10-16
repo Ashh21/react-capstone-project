@@ -8,9 +8,11 @@ const TimerCard = () => {
     const [minutes, setMinutes] = useState(0)
     const [seconds, setSeconds] = useState(0)
     const [isPlaying, setIsPlaying] = useState(false)
+    const [time, setTime] = useState(0)
 
     const timerHandler = () => {
         setIsPlaying(true)
+        setTime(hours * 3600 + minutes * 60 + seconds)
     }
 
     const incrementHour = () => {
@@ -42,7 +44,7 @@ const TimerCard = () => {
             <div className='stop-watch'>
                 <CountdownCircleTimer
                     isPlaying={isPlaying}
-                    duration={7}
+                    duration={time}
                     colors={['#004777', '#F7B801', '#A30000', '#A30000']}
                     colorsTime={[7, 5, 2, 0]}
                 >

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Roboto&family=Single+Day&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.entertainment-div {
+    min-height: 100vh;
+    background-color: black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.heading h1 {
+    color: #72DB73;
+    font-family: 'Single Day';
+    font-size: 47.333px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 139.688%;
+}
+
+.header-img {}
+
+.short-des h4 {
+    padding: 0 4rem 0.4rem ;
+    color: #FFF;
+    font-family: 'Roboto';
+    font-size: 30.424px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 139.688%;
+    letter-spacing: 0.608px;
+}
+
+.movie-cards {
+    color: wheat;
+}
+
+
+.movie-img {
+    padding: 0 1rem;
+    width: 225px;
+    height: 175px;
+}
+
+.movie-card {
+    display: flex;
+    padding: 1rem;
+}
+
+.movie-title {
+    padding-left: 2rem;
+}
+
+.movie-title>h4 {
+    padding-left: 2rem;
+    color: #878787;
+    font-family: 'Roboto';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 139.688%;
+    letter-spacing: 0.6px;
+}
+
+.movie-card-div{
+    display: flex;
+    justify-content: space-between;
+}
