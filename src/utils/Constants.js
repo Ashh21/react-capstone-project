@@ -8,5 +8,3 @@ export const API_OPTIONS = {
 
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
-
-export const WEATHER_API_KEY = "6a863ea62b32e862de12afe8d907f54f"

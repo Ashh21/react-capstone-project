@@ -14,7 +14,7 @@ const WeatherCard = () => {
                 const data = await fetch("https://api.weatherapi.com/v1/current.json?key=e5f237647d59474688f134736230510&q=Pune&aqi=no")
                 const json = await data.json();
                 setWeatherData(json?.current);
-                console.log(weatherData)
+                // console.log(weatherData)
             }
             fetchData()
         } catch (e) {
