@@ -14,6 +14,7 @@ const WeatherCard = () => {
                 const data = await fetch("http://api.weatherapi.com/v1/current.json?key=e5f237647d59474688f134736230510&q=Delhi, india&aqi=no")
                 const json = await data.json();
                 setWeatherData(json);
+                console.log(json)
             }
             fetchData()
         } catch (e) {
@@ -30,7 +31,7 @@ const WeatherCard = () => {
                     <img src={vector3} alt='logo' />
                     {weatherData?.current?.precip_mm}
                 </div>
-                
+
                 <div className='line'>
                     <img src={line} alt="logo" />
                 </div>

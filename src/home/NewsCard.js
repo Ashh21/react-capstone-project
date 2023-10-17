@@ -18,7 +18,6 @@ const NewsCard = () => {
         }
     }, [])
 
-
     return (
         <div className='news'>
             <div className='news-img-div'>
