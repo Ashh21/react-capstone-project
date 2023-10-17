@@ -7,11 +7,11 @@ import line from '../images/Line 2.png'
 
 
 const WeatherCard = () => {
-    const [weatherData, setWeatherData] = useState(null)
+    const [weatherData, setWeatherData] = useState("")
     useEffect(() => {
         try {
             const fetchData = async () => {
-                const data = await fetch("https://api.weatherapi.com/v1/current.json?key=e5f237647d59474688f134736230510&q=Delhi&aqi=no")
+                const data = await fetch("https://api.weatherapi.com/v1/current.json?key=e5f237647d59474688f134736230510&q=Pune&aqi=no")
                 const json = await data.json();
                 setWeatherData(json?.current);
                 console.log(weatherData)
