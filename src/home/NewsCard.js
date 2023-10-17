@@ -6,9 +6,9 @@ const NewsCard = () => {
     useEffect(() => {
         try {
             const fetchData = async () => {
-                const data = await fetch("https://newsdata.io/api/1/news?apikey=pub_31353df17a9dc5ae288e976e834ff4579ab23&q=pegasus&language=en")
+                const data = await fetch("https://newsdata.io/api/1/news?apikey=pub_31353df17a9dc5ae288e976e834ff4579ab23&q=pizza")
                 const json = await data.json();
-                setNewsData(json?.results[4])
+                setNewsData(json?.results[7])
                 console.log(json)
             }
             fetchData()
