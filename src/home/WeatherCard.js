@@ -11,10 +11,10 @@ const WeatherCard = () => {
     useEffect(() => {
         try {
             const fetchData = async () => {
-                const data = await fetch("http://api.weatherapi.com/v1/current.json?key=e5f237647d59474688f134736230510&q=delhi&aqi=no")
+                const data = await fetch("http://api.weatherapi.com/v1/current.json?key=e5f237647d59474688f134736230510&q=Delhi&aqi=no")
                 const json = await data.json();
-                setWeatherData(json);
-                console.log(json)
+                setWeatherData(json?.current);
+                console.log(weatherData)
             }
             fetchData()
         } catch (e) {
@@ -23,12 +23,12 @@ const WeatherCard = () => {
     return (
         <div className='weather-card'>
             <div className='date-div'>
-                {weatherData?.location?.localtime}
+                {weatherData?.last_updated}
             </div>
             <div className='bottom' >
                 <div className='rain-div'>
                     <img src={vector3} alt='logo' />
-                    {weatherData?.current?.precip_mm}
+                    {weatherData?.precip_mm}
                 </div>
 
                 <div className='line'>
@@ -36,10 +36,10 @@ const WeatherCard = () => {
                 </div>
 
                 <div className='temp-div'>
-                    <div className='temperature'> {weatherData?.current?.temp_c + " °C "}</div>
+                    <div className='temperature'> {weatherData?.temp_c + " °C "}</div>
                     <div className='temp'>
                         <div><img src={vector2} alt="logo" /></div>
-                        {weatherData?.current?.pressure_mb + " mbar"}
+                        {weatherData?.pressure_mb + " mbar"}
                     </div>
                     <div className='pressure'>Pressure</div>
                 </div>
@@ -52,7 +52,7 @@ const WeatherCard = () => {
                     <div className='wind-div'>
                         <img src={vector4} alt="logo" />
                         <div className='wind-div2'>
-                            <div> {weatherData?.current?.wind_kph + " km/h"} </div>
+                            <div> {weatherData?.wind_kph + " km/h"} </div>
                             <div>Wind</div>
                         </div>
                     </div>
@@ -61,14 +61,12 @@ const WeatherCard = () => {
                         <div className='humidity-div'>
                             <img src={group} alt="logo" />
                             <div className='humidity-div2'>
-                                <div> {weatherData?.current?.humidity + " %"} </div>
+                                <div> {weatherData?.humidity + " %"} </div>
                                 <div> Humidity</div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
 
         </div>
