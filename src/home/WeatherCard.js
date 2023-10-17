@@ -11,14 +11,13 @@ const WeatherCard = () => {
     useEffect(() => {
         try {
             const fetchData = async () => {
-                const data = await fetch("http://api.weatherapi.com/v1/current.json?key=e5f237647d59474688f134736230510&q=Delhi, india&aqi=no")
+                const data = await fetch("http://api.weatherapi.com/v1/current.json?key=e5f237647d59474688f134736230510&q=delhi&aqi=no")
                 const json = await data.json();
                 setWeatherData(json);
                 console.log(json)
             }
             fetchData()
         } catch (e) {
-
         }
     }, [weatherData])
     return (
